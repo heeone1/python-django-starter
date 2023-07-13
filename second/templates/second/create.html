@@ -1,0 +1,8 @@
+<form action="{% url 'create' %}" method="post">
+    <!--각각이 다 다른값을 가지고 있는 토큰이 서버로 제출되었을 때 이 토큰이 유효한 것인지 검증-->
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <button type="submit">제출</button>
+</form>
